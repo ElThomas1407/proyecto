@@ -15,53 +15,15 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración</title>
-    <link rel="stylesheet" href="EstilosPanel.css">
-    <style>        
-        .card {
-            background-color: #f9f9f9; 
-            border: 1px solid #ddd; 
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-            transition: box-shadow 0.3s;
-        }
-        .card:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: white;
-            background-color: blue; 
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .btn:hover {
-            background-color: darkblue;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="Gafra Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Cerrar sesión</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    <?php include 'navbar.php'; ?>
+    
     <main>
-        <div class="title-section">
-            <h1>Administrador</h1>
-            <span>gestiona tus servicios</span>
-        </div>
         <div class="container">
             <div class="card">
                 <h2>Registra</h2>

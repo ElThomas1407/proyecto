@@ -12,7 +12,6 @@
         }
 
         body {
-            /* background-image: url('https://cdn.leonardo.ai/users/5bb7cd8c-db5c-4d5a-97b1-41ec347f7c60/generations/629b8f0c-6879-46c9-bd5e-27aed6009acd/Leonardo_Phoenix_A_whimsical_illustration_featuring_a_soft_pas_0.jpg'); */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,13 +25,11 @@
 
         .login-header {
             text-align: center;
-
         }
 
         .logo-container {
             margin-right: 50px;
         }
-
 
         .login-header img {
             max-width: 450px;
@@ -44,8 +41,10 @@
 
         .container-login-parent {
             display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
-
 
         .login-container {
             width: 450px;
@@ -96,7 +95,6 @@
             color: #0056b3;
         }
 
-        /* Estilos para el mensaje de error */
         .error-message {
             color: #ff4d4d;
             font-size: 0.9rem;
@@ -105,7 +103,6 @@
             display: none;
         }
 
-        /* Animación */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -115,6 +112,39 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        /* Media Queries para hacer responsive */
+        @media (max-width: 768px) {
+            .container-login-parent {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .logo-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .login-header img {
+                max-width: 300px;
+            }
+
+            .login-container {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .login-header img {
+                max-width: 250px;
+            }
+
+            .login-container {
+                padding: 20px;
             }
         }
     </style>
@@ -127,7 +157,7 @@
                 <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512"
                     alt="gafra logo">
             </div>
-        </div> 
+        </div>
         <div class="login-container">
             <h2 class="text-center">Iniciar Sesión</h2>
 
@@ -154,7 +184,6 @@
                 ¿No tienes cuenta? <a href="gafraregistro1.html">Regístrate</a>
             </p>
         </div>
-       
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
