@@ -1,5 +1,4 @@
 <?php
-
 // Iniciar la sesión
 session_start();
 
@@ -9,7 +8,6 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -25,30 +23,33 @@ if (!isset($_SESSION['user_id'])) {
             background-color: #f3f6fa;
         }
 
-        /* Encabezado */
+        /* Contenedor del logo y barra de navegación */
         .navbar-custom {
-            background-color: #2a5ca8;
-            color: #fff;
+            background-color: #067DB7;
             padding: 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
+
         .navbar-custom .logo img {
             width: 150px;
             height: auto;
         }
-        .navbar-custom .logout {
+
+        .logout {
             color: #fff;
             font-weight: bold;
             text-decoration: none;
             background-color: #e74c3c;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        .navbar-custom .logout:hover {
+
+        .logout:hover {
             background-color: #c0392b;
+            transform: translateY(-2px);
         }
 
         /* Estilos de tarjetas */
@@ -57,93 +58,117 @@ if (!isset($_SESSION['user_id'])) {
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
+            width: 100%; /* Aumentar el tamaño de las tarjetas */
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
+
         .card h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: #333;
         }
+
         .card p {
             color: #777;
         }
+
         .card .btn-primary {
-            background-color: #2a5ca8;
+            background-color: #067DB7;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-weight: bold;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
+
         .card .btn-primary:hover {
             background-color: #1e4381;
+            transform: translateY(-2px);
         }
-        
+
         /* Contenedor principal */
         .container-custom {
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         /* Sección de título */
-        .title-section h1 {
-            font-weight: bold;
-            color: #2a5ca8;
+        .admin-text {
+            text-align: left; /* Alinear a la izquierda */
+            margin-bottom: 30px;
         }
-        .title-section span {
-            font-size: 1.1rem;
+
+        .admin-text h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #067DB7;
+        }
+
+        .admin-text p {
+            font-size: 1.2rem;
             color: #6c757d;
+        }
+
+        /* Ajustes de las cards */
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1; 
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Encabezado -->
+
+    <!-- Encabezado con logo a la izquierda y botón de cerrar sesión a la derecha -->
     <header class="navbar-custom">
         <div class="logo">
-            <img src="#" alt="Gafra Logo">
+            <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512" alt="Gafra Logo">
         </div>
         <a href="logout.php" class="logout">Cerrar sesión</a>
-
     </header>
 
     <!-- Contenido principal -->
     <main class="container container-custom">
-        <div class="title-section text-center mb-4">
+        <div class="admin-text">
             <h1>Administrador</h1>
-            <span>gestiona tus servicios</span>
+            <p>Gestiona tus servicios</p>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card">
-                    <h3>Usuarios</h3>
-                    <p>Consulta tus servicios de Usuarios</p>
-                    <a href="panelusuarios.php" class="btn btn-primary">Ir a Usuarios</a>
-                </div>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Usuarios</h3>
+                <p>Consulta tus servicios de Usuarios</p>
+                <a href="panelusuarios.php" class="btn btn-primary">Ir a Usuarios</a>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card">
-                    <h3>Productos</h3>
-                    <p>Consulta tus Productos</p>
-                    <a href="panelproductos.php" class="btn btn-primary">Ir a Productos</a>
-                </div>
+            <div class="card">
+                <h3>Productos</h3>
+                <p>Consulta tus Productos</p>
+                <a href="panelproductos.php" class="btn btn-primary">Ir a Productos</a>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card">
-                    <h3>Pre-Orden</h3>
-                    <p>Consulta tus Pre-Ordenes</p>
-                    <a href="panelpreorden.php" class="btn btn-primary">Ir a Pre-Orden</a>
-                </div>
+            <div class="card">
+                <h3>Pre-Orden</h3>
+                <p>Consulta tus Pre-Ordenes</p>
+                <a href="panelpreorden.php" class="btn btn-primary">Ir a Pre-Orden</a>
             </div>
-            <div class="col-md-6 col-lg-3 mb-4">
-                <div class="card">
-                    <h3>Ventas</h3>
-                    <p>Consulta las ventas realizadas</p>
-                    <a href="panelventas.php" class="btn btn-primary">Ir a Ventas</a>
-                </div>
+            <div class="card">
+                <h3>Ventas</h3>
+                <p>Consulta las ventas realizadas</p>
+                <a href="panelventas.php" class="btn btn-primary">Ir a Ventas</a>
             </div>
         </div>
     </main>
