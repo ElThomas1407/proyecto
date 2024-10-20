@@ -12,7 +12,7 @@
         }
 
         body {
-            background-image: url('https://cdn.leonardo.ai/users/5bb7cd8c-db5c-4d5a-97b1-41ec347f7c60/generations/629b8f0c-6879-46c9-bd5e-27aed6009acd/Leonardo_Phoenix_A_whimsical_illustration_featuring_a_soft_pas_0.jpg');
+            /* background-image: url('https://cdn.leonardo.ai/users/5bb7cd8c-db5c-4d5a-97b1-41ec347f7c60/generations/629b8f0c-6879-46c9-bd5e-27aed6009acd/Leonardo_Phoenix_A_whimsical_illustration_featuring_a_soft_pas_0.jpg'); */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,19 +20,30 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-color: #f8f9fa;
+            background-color: #f7f7f7;
             margin: 0;
         }
 
         .login-header {
             text-align: center;
-            
+
         }
 
+        .logo-container {
+            margin-right: 50px;
+        }
+
+
         .login-header img {
-            max-width: 180px;
+            max-width: 450px;
             display: block;
             margin: 0 auto;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.673);
+        }
+
+        .container-login-parent {
+            display: flex;
         }
 
 
@@ -110,35 +121,40 @@
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512"
-                alt="gafra logo">
-        </div>
-        <h2 class="text-center">Iniciar Sesión</h2>
-
-        <!-- Mensaje de error -->
-        <div id="error-message" class="error-message">
-            Las credenciales son incorrectas, por favor intenta nuevamente.
-        </div>
-
-        <form action="controladorlogin.php" method="POST">
-            <div class="form-group">
-                <label for="username">Nombre de Usuario:</label>
-                <input type="text" class="form-control" placeholder="Ingresa tu Usuario" id="nom_usuario"
-                    name="nom_usuario" required>
+    <div class="container-login-parent">
+        <div class="logo-container">
+            <div class="login-header">
+                <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512"
+                    alt="gafra logo">
             </div>
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" class="form-control" placeholder="Ingresa tu Contraseña" id="contrasena"
-                    name="contrasena" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-        </form>
+        </div> 
+        <div class="login-container">
+            <h2 class="text-center">Iniciar Sesión</h2>
 
-        <p class="text-center">
-            ¿No tienes cuenta? <a href="gafraregistro1.html">Regístrate</a>
-        </p>
+            <!-- Mensaje de error -->
+            <div id="error-message" class="error-message">
+                Las credenciales son incorrectas, por favor intenta nuevamente.
+            </div>
+
+            <form action="controladorlogin.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario:</label>
+                    <input type="text" class="form-control" placeholder="Ingresa tu Usuario" id="nom_usuario"
+                        name="nom_usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" placeholder="Ingresa tu Contraseña" id="contrasena"
+                        name="contrasena" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            </form>
+
+            <p class="text-center">
+                ¿No tienes cuenta? <a href="gafraregistro1.html">Regístrate</a>
+            </p>
+        </div>
+       
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
