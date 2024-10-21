@@ -73,6 +73,7 @@ if (!$preOrdenEspecifica) {
     </style>
 </head>
 <body>
+    <?php include 'migaDePan.php'; ?>
 
     <div class="container mt-5">
         <!-- Mostrar alerta si hay algún error -->

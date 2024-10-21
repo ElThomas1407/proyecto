@@ -54,9 +54,7 @@ $productos = $productoModel->ConsultarTodos();
         }
 
         .navbar-brand img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            width: 50px;
         }
 
         .navbar-nav {
@@ -150,7 +148,7 @@ $productos = $productoModel->ConsultarTodos();
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="#">
-            <img src="https://via.placeholder.com/40" alt="Logo"> <!-- Reemplaza con tu logo -->
+            <img src="logo-white.JPG" alt="Logo"> <!-- Reemplaza con tu logo -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
