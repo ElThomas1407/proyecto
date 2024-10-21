@@ -25,8 +25,10 @@ if (!isset($_SESSION['user_id'])) {
 
         /* Contenedor del logo y barra de navegación */
         .navbar-custom {
+            background: linear-gradient(to right, #d5d5d7, #A3C1D4, #067DB7); 
+            color: #ffffff; /* Color del texto, opcional */
             background-color: #067DB7;
-            padding: 20px;
+            padding: 0 20px 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,16 +43,11 @@ if (!isset($_SESSION['user_id'])) {
             color: #fff;
             font-weight: bold;
             text-decoration: none;
-            background-color: #e74c3c;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+
         }
 
-        .logout:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
-        }
 
         /* Estilos de tarjetas */
         .card {
@@ -137,7 +134,7 @@ if (!isset($_SESSION['user_id'])) {
     <!-- Encabezado con logo a la izquierda y botón de cerrar sesión a la derecha -->
     <header class="navbar-custom">
         <div class="logo">
-            <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512" alt="Gafra Logo">
+            <img src="logo-white.JPG" alt="Gafra Logo">
         </div>
         <a href="logout.php" class="logout">Cerrar sesión</a>
     </header>
@@ -158,7 +155,7 @@ if (!isset($_SESSION['user_id'])) {
             <div class="card">
                 <h3>Productos</h3>
                 <p>Consulta tus Productos</p>
-                <a href="panelproductos.php" class="btn btn-primary">Ir a Productos</a>
+                <a href="panelproductos.php?modulo=productos" class="btn btn-primary">Ir a Productos</a>
             </div>
             <div class="card">
                 <h3>Pre-Orden</h3>

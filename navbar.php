@@ -1,4 +1,7 @@
 <!-- navbar.php -->
+<?php
+    $modulo_por_defecto = isset($modulo) ? $modulo : 'servicios';
+?>
 <head>
     <link rel="stylesheet" type="text/css" href="navbar.css">
 </head>
@@ -13,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="panelusuarios.php"><i class="fas fa-users"></i> Usuarios </a>
+                    <a class="nav-link" href="panelusuarios.php?modulo=usuarios"><i class="fas fa-users"></i> Usuarios </a>
                 </li> 
                 <li class="nav-item">
                     <a class="nav-link" href="panelproductos.php"><i class="fas fa-imbox"></i> Productos </a>
@@ -25,9 +28,6 @@
                     <a class="nav-link" href="panelventas.php"><i class="fa fa-credit-card"></i> Ventas </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);" onclick="history.back();"><i class="fas fa-arrow-left"></i> Regresar </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="logout.php">Cerrar Sesión</a>
                 </li>
             </ul>
@@ -37,5 +37,5 @@
 
 <div class="title-section">
     <h1>Administrador</h1>
-    <p>Gestiona tus servicios</p>
+    <p>Gestiona tus  <?php echo htmlspecialchars($modulo_por_defecto); ?>!</p>
 </div>

@@ -66,6 +66,7 @@ if (!isset($_SESSION['user_id'])) {
     </style>
 </head>
 <body>
+    <?php include 'migaDePan.php'; ?>
     <div class="container mt-5">
         <h2>Registro de Empleados</h2>
         <form action="proyectoC.php" method="POST">

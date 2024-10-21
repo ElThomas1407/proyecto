@@ -23,6 +23,7 @@ $usuarios = $usuarioModel->ConsultarGeneral();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <?php include 'migaDePan.php'; ?>
     <div class="container mt-5">
         <h2>Consulta de Usuarios con Actualización</h2>
         <table class="table table-bordered">
