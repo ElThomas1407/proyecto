@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
         body {
             background-image: url('#');
             font-family: 'Montserrat', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #fff;
         }
         .container {
             width: 550px;
@@ -33,6 +33,19 @@ if (!isset($_SESSION['user_id'])) {
             backdrop-filter: blur(15px);
             animation: fadeIn 0.5s ease-in;
         }
+
+        .login-header {
+            display: flex;
+            justify-content: center;  
+            align-items: center;     
+            margin-bottom: 20px;      
+        }
+
+        .login-header img {
+            max-width: 100px;         
+            height: auto;          
+        }
+
         h2 {
             font-weight: 600;
             margin-bottom: 20px;
@@ -68,6 +81,9 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <?php include 'migaDePan.php'; ?>
     <div class="container mt-5">
+        <div class="login-header">
+                <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512" alt="gafra logo">
+        </div>
         <h2>Registro de Empleados</h2>
         <form action="proyectoC.php" method="POST">
             <div class="mb-3">

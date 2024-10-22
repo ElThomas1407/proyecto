@@ -164,6 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </nav>
+    <?php include 'migaDePan.php'; ?>
 
     <div class="container">
         <h2><i class="fas fa-file-alt"></i> Registrar Pre-Orden</h2>

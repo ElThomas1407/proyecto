@@ -154,12 +154,12 @@ if (!isset($_SESSION['user_id'])) {
             </div>
             <div class="card">
                 <h3>Productos</h3>
-                <p>Consulta tus Productos</p>
+                <p>Consulta tus servicios de Productos</p>
                 <a href="panelproductos.php?modulo=productos" class="btn btn-primary">Ir a Productos</a>
             </div>
             <div class="card">
                 <h3>Pre-Orden</h3>
-                <p>Consulta tus Pre-Ordenes</p>
+                <p>Consulta tus servicios de  Pre-Ordenes</p>
                 <a href="panelpreorden.php" class="btn btn-primary">Ir a Pre-Orden</a>
             </div>
             <div class="card">

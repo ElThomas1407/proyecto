@@ -79,23 +79,63 @@ html {
 }
 
 .container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
+.login-button {
+    background-color: #067DB7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.container-user .content-shopping-cart {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-left: 1rem;
+.login-button:hover {
+    background-color: #055F8A;
 }
+
+.divider {
+    border-left: 2px solid #ccc;
+    height: 25px;
+    margin: 0 10px;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #067DB7;
+    cursor: pointer;
+}
+
+.container-user i {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.content-shopping-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.text {
+    font-size: 14px;
+    color: #333;
+}
+
+.number {
+    font-size: 12px;
+    color: #666;
+}
+
+
 
 .content-shopping-cart {
 	display: flex;
@@ -103,6 +143,8 @@ html {
 }
 
 /* ************* NAVBAR ************* */
+
+
 .container-navbar {
 	background-color: var(--primary-color);
 }
@@ -111,7 +153,7 @@ html {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 0;
+	padding: 2rem 0;
 }
 
 .navbar .fa-bars {
@@ -157,47 +199,6 @@ html {
 	color: #fff;
 }
 
-.search-form {
-	position: relative;
-	display: flex;
-	align-items: center;
-	border: 2px solid #fff;
-	border-radius: 2rem;
-	background-color: #fff;
-	height: 4.4rem;
-	overflow: hidden;
-}
-
-.search-form input {
-	outline: none;
-	font-family: inherit;
-	border: none;
-	width: 25rem;
-	font-size: 1.4rem;
-	padding: 0 2rem;
-	color: #777;
-	cursor: pointer;
-}
-
-.search-form input::-webkit-search-cancel-button {
-	appearance: none;
-}
-
-.search-form .btn-search {
-	border: none;
-	background-color: var(--primary-color);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	padding: 1rem;
-}
-
-.btn-search i {
-	font-size: 2rem;
-	color: #fff;
-}
-
 /*               BANNER               */
 .banner {
 	background-image: url('https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/93d18e7d-8bd5-4e8b-9527-6d35df2c9120/Leonardo_Phoenix_A_heartwarming_image_showcasing_a_serene_nurs_3.jpg');
@@ -234,8 +235,8 @@ html {
 	background-color: var(--primary-color);
 	display: inline-block;
 	padding: 2rem 5rem;
-
 	border-radius: 3rem;
+	font-size: medium;
 }
 
 /*            MAIN CONTENT            */
@@ -243,46 +244,7 @@ html {
 	background-color: var(--background-color);
 }
 
-/*              FEATURES              */
-.container-features {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 3rem;
-	padding: 3rem 0;
-}
 
-.card-feature {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1.5rem;
-
-	background-color: #fff;
-	border-radius: 1rem;
-	padding: 1.5rem 0;
-}
-
-.card-feature i {
-	font-size: 2.7rem;
-	color: var(--primary-color);
-}
-
-.feature-content {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-}
-
-.feature-content span {
-	font-weight: 700;
-	font-size: 1.2rem;
-	color: var(--dark-color);
-}
-
-.feature-content p {
-	color: #777;
-	font-weight: 500;
-}
 
 /*             CATEGORIES             */
 .top-categories {
@@ -368,32 +330,6 @@ html {
 	margin-bottom: 3rem;
 }
 
-.container-options {
-	display: flex;
-	justify-content: center;
-	gap: 2rem;
-	margin-bottom: 1rem;
-}
-
-.container-options span {
-	color: #777;
-	background-color: #fff;
-	padding: 0.7rem 3rem;
-	font-size: 1.4rem;
-	text-transform: capitalize;
-	border-radius: 2rem;
-	cursor: pointer;
-}
-
-.container-options span:hover {
-	background-color: var(--primary-color);
-	color: #fff;
-}
-
-.container-options span.active {
-	background-color: var(--primary-color);
-	color: #fff;
-}
 
 /* Products */
 .container-products {
@@ -567,119 +503,6 @@ html {
 	grid-column: 2/4;
 	grid-row: 1/3;
 }
-
-/*              SPECIALS              */
-.specials {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	margin-bottom: 3rem;
-}
-
-/*                BLOGS               */
-.blogs {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.container-blogs {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 3rem;
-}
-
-.card-blog {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
-.card-blog .container-img {
-	border-radius: 2rem;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-}
-
-.button-group-blog {
-	position: absolute;
-	bottom: 1.5rem;
-	right: -2.5rem;
-
-	display: flex;
-	gap: 0.7rem;
-	z-index: -1;
-	transition: all 0.3s ease;
-}
-
-.card-blog:hover .button-group-blog {
-	z-index: 0;
-	right: 1.5rem;
-}
-
-.button-group-blog span {
-	background-color: #fff;
-	padding: 1rem;
-	border-radius: 50%;
-	transition: all 0.4s ease;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.button-group-blog span i {
-	font-size: 1.3rem;
-}
-
-.button-group-blog span:hover {
-	background-color: var(--primary-color);
-}
-
-.button-group-blog span:hover i {
-	color: #fff;
-}
-
-.content-blog h3 {
-	font-size: 1.8rem;
-	margin-bottom: 1.7rem;
-	color: var(--dark-color);
-	font-weight: 500;
-}
-
-.content-blog h3:hover {
-	color: var(--primary-color);
-	cursor: pointer;
-}
-
-.content-blog p {
-	margin-top: 1rem;
-	font-size: 1.4rem;
-	color: #777;
-}
-
-.content-blog span {
-	color: var(--primary-color);
-	font-size: 1.3rem;
-}
-
-.btn-read-more {
-	padding: 1rem 3rem;
-	background-color: var(--primary-color);
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.4rem;
-	border-radius: 2rem;
-	margin: 3rem 0 5rem;
-	display: inline-block;
-	cursor: pointer;
-}
-
-.btn-read-more:hover {
-	background-color: var(--dark-color);
-}
-
 /*               FOOTER               */
 .footer {
 	background-color: var(--primary-color);
