@@ -50,7 +50,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
 
         .navbar-nav {
             flex-direction: row;
-            gap: 20px;
+            gap: 50px;
         }
 
         .nav-link {
