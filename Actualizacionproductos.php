@@ -60,7 +60,7 @@ $productos = $productoModel->ConsultarTodos();
         }
 
         .table-container {
-            margin-top: 70px;
+            margin-top: 80px;
             background: white;
             border-radius: 10px;
             padding: 20px;
