@@ -38,7 +38,6 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
         }
         
         .navbar {
-            background-color: #1746A2;
             padding: 10px 30px;
             display: flex;
             align-items: center;
